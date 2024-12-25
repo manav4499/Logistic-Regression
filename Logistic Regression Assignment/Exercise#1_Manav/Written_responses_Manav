@@ -1,0 +1,133 @@
+
+c(1) (c)
+The first plot shows a strong correlation between tuition fee status and academic success, where students with up-to-
+date tuition fees are more likely to graduate, while those with unpaid fees tend to drop out. This indicates that
+financial stability or prompt fee payment may significantly impact a student's likelihood of graduating. In the second
+plot, gender appears to influence academic outcomes, with a higher proportion of female students graduating compared to
+male students, who show a slightly higher dropout rate. This suggests that female students in this dataset may generally
+ perform better academically or face fewer obstacles to graduation than their male counterparts.
+
+
+
+c(2)
+Admission Grade vs. Other Attributes:
+
+The distribution of admission grades shows a concentration between 100 and 140. However, there isn’t a clear correlation
+between admission grade and other attributes like age at enrollment or grades in curricular units. This implies that a
+student’s admission grade may not strongly influence their performance in later semesters.
+Age at Enrollment vs. Other Attributes:
+
+The age at enrollment has a significant range, with most students being around 17-25 years old. The scatter plot reveals
+that age doesn’t appear to correlate strongly with performance in curricular units (grades in the 1st or 2nd semesters)
+, suggesting that students’ ages don’t have a major impact on academic performance within the observed range.
+Curricular Units 1st Sem (Grade) vs. 2nd Sem (Grade):
+
+There is a visible positive correlation between the grades in the first and second semesters. Students who perform well
+in the first semester tend to maintain similar grades in the second semester. This trend suggests a certain level of
+academic consistency among students.
+Grade Distributions in Curricular Units:
+
+Both first and second-semester curricular units have a somewhat similar grade distribution, with clusters of students
+achieving grades around 10-14. This might indicate a standard grading outcome or similar difficulty level across these
+units.
+
+
+Conclusions:
+The lack of correlation between admission grades and subsequent performance might imply that initial academic
+achievement (admission grade) isn’t necessarily a predictor of success in curricular units.
+
+Age at enrollment doesn’t seem to influence student performance, at least within this dataset. There is consistency in
+students’ performance from the first to the second semester, suggesting that those who do well initially tend to
+continue doing well.
+
+
+
+3(5)
+
+Output :
+*************
+Cross Validation Results:
+
+Test size: 0.10
+Min accuracy: 0.5455
+Mean accuracy: 0.7309
+Max accuracy: 1.0000
+
+Test size: 0.15
+Min accuracy: 0.5000
+Mean accuracy: 0.6918
+Max accuracy: 0.9000
+
+Test size: 0.20
+Min accuracy: 0.5556
+Mean accuracy: 0.7044
+Max accuracy: 0.9000
+
+Test size: 0.25
+Min accuracy: 0.4444
+Mean accuracy: 0.6972
+Max accuracy: 0.8889
+
+Test size: 0.30
+Min accuracy: 0.5556
+Mean accuracy: 0.7486
+Max accuracy: 1.0000
+
+Test size: 0.35
+Min accuracy: 0.4286
+Mean accuracy: 0.6768
+Max accuracy: 0.8750
+
+Test size: 0.40
+Min accuracy: 0.4286
+Mean accuracy: 0.6607
+Max accuracy: 0.8571
+
+Test size: 0.45
+Min accuracy: 0.3333
+Mean accuracy: 0.6476
+Max accuracy: 1.0000
+
+Test size: 0.50
+Min accuracy: 0.3333
+Mean accuracy: 0.6067
+Max accuracy: 0.8333
+
+
+Test size 0.30 is recommended as the best split scenario because it achieves the highest mean accuracy (0.7486) and
+provides stable results without significant performance drops, making it the most reliable choice for this dataset.
+
+
+
+
+b (8)
+Threshold = 0.5
+Accuracy: 0.75
+Precision:
+Class 0: 0.67
+Class 1: 0.81
+Recall:
+Class 0: 0.71
+Class 1: 0.77
+Threshold = 0.6
+Accuracy: 0.6944
+Precision:
+Class 0: 0.57
+Class 1: 0.87
+Recall:
+Class 0: 0.86
+Class 1: 0.59
+
+Analysis and Observation
+At threshold = 0.5, the model has a balanced trade-off between precision and recall for both classes, especially Class 1
+, which has a relatively high precision (0.81) and recall (0.77). This threshold provides a moderate balance, favoring
+slightly higher recall for Class 0.
+
+At threshold = 0.6, the model’s precision for Class 1 improves significantly to 0.87, while recall decreases to 0.59.
+For Class 0, precision drops to 0.57, but recall increases to 0.86. This threshold shift indicates a higher confidence
+in positive predictions (Class 1) but at the cost of missing more actual positives (lower recall for Class 1).
+
+Conclusion
+The 0.5 threshold offers a more balanced approach with reasonable accuracy and comparable precision and recall across
+both classes. Threshold 0.6 shifts towards higher precision for Class 1 but lowers recall, making it suitable if the
+goal is to reduce false positives for Class 1.
